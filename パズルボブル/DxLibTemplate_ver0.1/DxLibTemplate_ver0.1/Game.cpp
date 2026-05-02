@@ -20,8 +20,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// ↑ システム初期化 ↑
 	//---------------------------------------
 	
-	float angle = 0;
+	enum {
+		TITLE,
+		GAME,
+		RISALT,
+	};
 
+	int GAME_SCENE = TITLE;
+	
 
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
@@ -32,7 +38,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		// ↑ システム更新 ↑
 		//---------------------------------------
 
+		switch (GAME_SCENE){
+		case TITLE:
 
+			break;
+		}
 
 		//---------------------------------------
 		// 描画
