@@ -113,6 +113,7 @@ void GetNearestGrid(float x, float y, int* r, int* c) {
 
 struct Point { int r, c; };
 
+//ボールの位置
 std::vector<Point> GetNeighbors(int r, int c) {
     std::vector<Point> neighbors;
     int dr[] = { -1, -1, 0, 0, 1, 1 };
@@ -128,7 +129,7 @@ std::vector<Point> GetNeighbors(int r, int c) {
     }
     return neighbors;
 }
-
+// ボールの確認＆削除
 void CheckAndRemove(int r, int c) {
     if (grid[r][c].color == NONE) return;
 
